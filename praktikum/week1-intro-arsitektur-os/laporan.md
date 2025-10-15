@@ -91,7 +91,8 @@ Dengan demikian, tidak ada satu model yang mutlak terbaik; yang relevan adalah p
 1. Sebutkan tiga fungsi utama sistem operasi: Manajemen Sumber Daya,Manajemen File,dan Sistem Antarmuka Pengguna
 2. Jelaskan perbedaan antara Kernel Mode: Akses penuh ke seluruh sistem. Digunakan oleh sistem operasi. Kesalahan bisa menyebabkan sistem crash.
  
-  User Mode: Akses terbatas. Digunakan oleh aplikasi pengguna. Kesalahan hanya memengaruhi program, bukan seluruh sistem.rnel mode dan user mode.
+User Mode: Akses terbatas. Digunakan oleh aplikasi pengguna. Kesalahan hanya memengaruhi program, bukan seluruh sistem.rnel mode dan user mode.
+  
 3. Sebutkan contoh OS dengan arsitektur monolithic dan microkernel.
 Monolithic Kernel: Linux MS-DOS UNIX
 Microkernel: Minix QNX MacOS
