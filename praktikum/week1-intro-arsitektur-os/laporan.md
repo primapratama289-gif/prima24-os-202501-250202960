@@ -88,12 +88,12 @@ Model yang paling relevan untuk sistem operasi modern adalah hybrid kernel, yait
 Dengan demikian, tidak ada satu model yang mutlak terbaik; yang relevan adalah penerapan kernel hybrid dan modular yang menyesuaikan kebutuhan spesifik: performa untuk server, keandalan untuk embedded, dan fleksibilitas untuk desktop.
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Sebutkan tiga fungsi utama sistem operasi: Manajemen Sumber Daya,Manajemen File,dan Sistem Antarmuka Pengguna
+2. Jelaskan perbedaan antara keKernel Mode: Akses penuh ke seluruh sistem. Digunakan oleh sistem operasi. Kesalahan bisa menyebabkan sistem crash.
+User Mode: Akses terbatas. Digunakan oleh aplikasi pengguna. Kesalahan hanya memengaruhi program, bukan seluruh sistem.rnel mode dan user mode.
+3. Sebutkan contoh OS dengan arsitektur monolithic dan microkernel.
+Monolithic Kernel: Linux MS-DOS UNIX
+Microkernel: Minix QNX MacOS
 
 ---
 
