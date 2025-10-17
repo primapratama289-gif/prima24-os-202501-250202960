@@ -45,7 +45,9 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+<img width="1919" height="873" alt="Screenshot 2025-10-10 210140" src="https://github.com/user-attachments/assets/46c25e80-fe91-4989-8a7d-8ba593dd123c" />
+
+
 
 ---
 
