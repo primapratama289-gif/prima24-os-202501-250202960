@@ -60,7 +60,7 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+<img width="1129" height="1079" alt="Screenshot Diagram Alur System Call" src="https://github.com/user-attachments/assets/742df178-683f-4d62-a4db-e81a6ee451e9" />
 
 ---
 
