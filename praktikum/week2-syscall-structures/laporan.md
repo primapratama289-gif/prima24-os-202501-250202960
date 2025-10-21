@@ -51,9 +51,9 @@ System call adalah mekanisme yang digunakan program di user mode untuk meminta l
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
-uname -a
-lsmod | head
-dmesg | head
+strace ls
+strace -e trace=open,readf,write,close cat /etc/passwd
+dmesg | tail -n 10
 ```
 
 ---
