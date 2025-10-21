@@ -44,6 +44,7 @@ System call adalah mekanisme yang digunakan program di user mode untuk meminta l
 1. Setup Environment
 
    * Gunakan Linuk (Ubuntu/WSL)
+   * Pastikan Perintah `strace` dan `man` sudah terinstal.
 
 ---
 
