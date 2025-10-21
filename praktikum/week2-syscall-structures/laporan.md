@@ -41,12 +41,12 @@ System call adalah mekanisme yang digunakan program di user mode untuk meminta l
 ---
 
 ## Langkah Praktikum
-Setup Environment
+1. Setup Environment
 
-Gunakan Linux (Ubuntu/WSL).
-Pastikan perintah strace dan man sudah terinstal.
-Konfigurasikan Git (jika belum dilakukan di minggu sebelumnya).
-Eksperimen 1 – Analisis System Call Jalankan perintah berikut:
+** Gunakan Linux (Ubuntu/WSL).
+** Pastikan perintah strace dan man sudah terinstal.
+** Konfigurasikan Git (jika belum dilakukan di minggu sebelumnya).
+2. Eksperimen 1 – Analisis System Call Jalankan perintah berikut:
 
 strace ls
 Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.
