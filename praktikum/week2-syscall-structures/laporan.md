@@ -61,6 +61,10 @@ dmesg | head
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 <img width="1129" height="1079" alt="Screenshot Diagram Alur System Call" src="https://github.com/user-attachments/assets/742df178-683f-4d62-a4db-e81a6ee451e9" />
+<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/5ce6ee84-f5c5-46ba-80d5-44623c699239" />
+<img width="1920" height="1080" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/50101a98-daf5-4e2b-8545-17c120ac94d8" />
+<img width="1920" height="1080" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/4edd3921-99e9-48d2-b379-6934828e0aab" />
+<img width="1920" height="1080" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/21a22a63-e506-4879-880e-25865c46480d" />
 
 ---
 
