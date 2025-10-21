@@ -117,7 +117,35 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
 ---
+### Tabel Analisis Perintah
 
+| No  | Perintah                                                    | Fungsi Utama                                                                                                           | Contoh Output                                                              |
+| --- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| 1   | strace ls                                                 | Melacak seluruh system call yang dijalankan ketika perintah ls dieksekusi.                                             | openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY                            |
+| 2   | strace -e trace=open,read,write,close cat /etc/passwd     | Memfilter dan menampilkan hanya system call tertentu (seperti open, read, write, close) yang digunakan saat membaca file /etc/passwd. | read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0...", 220)        |
+| 3   | dmesg tail                                                | Menampilkan pesan kernel terbaru yang muncul selama sistem beroperasi.                                                 | [4067.875372] sd 0:0:2:0: [sdb] Mode Sense: 1f 00 00 08                  |```
+
+### Hasilnya akan terlihat seperti ini:
+
+### Tabel Analisis Perintah
+
+| No | Perintah
+| Fungsi Utama
+| Contoh Output 
+|
+| --- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| 1   | `strace ls`
+| Melacak seluruh system call yang dijalankan ketika perintah ls dieksekusi. 
+| openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY 
+|
+| 2   | strace -e trace=open,read,write,close cat /etc/passwd    | Memfilter dan menampilkan hanya system call tertentu (seperti open, read, write, close) yang digunakan saat membaca file /etc/passwd.    | read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0...", 220)            |
+| 3 | dmesg tail | Menampilkan pesan kernel terbaru yang muncul selama sistem beroperasi. 
+| `[4067.875372] sd 0:0:2:0: [sdb] Mode Sense: 1f 00 00 08` 
+|```
+
+
+
+---
 ## Kesimpulan
 Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
