@@ -45,6 +45,14 @@ System call adalah mekanisme yang digunakan program di user mode untuk meminta l
 
    * Gunakan Linuk (Ubuntu/WSL)
    * Pastikan Perintah `strace` dan `man` sudah terinstal.
+   * Konfigurasikan Git (jika belum dilakukan di minggu sebelumnya).
+
+2. Eksperimen 1 – Analisis System Call
+   Jalankan perintah berikut:
+   (`strace ls`)
+   Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.
+Simpan hasil analisis ke results/syscall_ls.txt.
+   
 
 ---
 
