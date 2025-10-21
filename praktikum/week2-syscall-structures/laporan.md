@@ -49,9 +49,11 @@ System call adalah mekanisme yang digunakan program di user mode untuk meminta l
 
 2. Eksperimen 1 – Analisis System Call
    Jalankan perintah berikut:
-   (`strace ls`)
-   Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.
-Simpan hasil analisis ke results/syscall_ls.txt.
+   ```
+   strace ls
+   ```
+   > Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.
+   > Simpan hasil analisis ke results/syscall_ls.txt.
    
 
 ---
