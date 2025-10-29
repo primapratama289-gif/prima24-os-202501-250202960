@@ -36,9 +36,9 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 2. Eksperimen 1 - Navigasi Sistem File
    Jalankan perintah berikut:
 ```
-   "pwd"
+   pwd
    ls -l
-   "cd" /tmp
+   cd /tmp
    ls -a
 ```
    * Jelaskan hasil tiap perintah.
