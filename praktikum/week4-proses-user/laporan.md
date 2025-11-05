@@ -231,11 +231,11 @@ Sertakan screenshot hasil percobaan atau diagram:
    - Catat hasilnya dalam laporan.
    ```bash
 systend(1)-+-agetty(199)
-           |(-agetty(202)
+           |-agetty(202)
            |-cron(166)
            |-dbus-daemon(167)
-           |-init-systemd (Ub(2)--+--SessionLeader(979)---Relay(986)(980)---bash(986)--+--head (1775)
-           |                                                                           `-pstree(1774)
+           |-init-systemd(Ub(2)--+--SessionLeader(979)---Relay(986)(980)---bash(986)-+-head (1775)
+           |                      |                                                   `-pstree(1774)
            |                      |-init(6)-(init](7)
            |                      |-login(295)-bash(365)
            |                      `-{init-systemd(Ub}(8)
