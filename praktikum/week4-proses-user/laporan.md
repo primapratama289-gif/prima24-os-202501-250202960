@@ -219,7 +219,7 @@ Sertakan screenshot hasil percobaan atau diagram:
       ps aux | grep sleep
       prima      1712  0.0  0.0   4088  1920 pts/0    s+   01:36  0:00 grep --color=auto sleep
      [1]+  Terminated              sleep 1000
-
+    
 ---
 
  **Eksperimen 4 – Analisis Hierarki Proses**
