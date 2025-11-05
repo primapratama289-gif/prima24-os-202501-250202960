@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu [4]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: Manajemen Proses dan User di Linux
 
 ---
 
@@ -147,7 +147,8 @@ Sertakan screenshot hasil percobaan atau diagram:
      - `groups=...` artinya grup tambahan fungsinya Menampilkan daftar grup lain yang memberi izin dan akses tertentu.
 
 
-  - `groups` = Perintah groups digunakan untuk menampilkan daftar grup tempat user saat ini tergabung.
+   - `groups` = Perintah groups digunakan untuk menampilkan daftar grup tempat user saat ini tergabung.
+   
 | Grup        | Arti                  | Fungsi                                                      |
 | ----------- | --------------------- | ----------------------------------------------------------- |
 | **adm**     | Administrator logs    | Dapat membaca file log sistem.                              |
@@ -163,7 +164,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 | **netdev**  | Network devices       | Mengelola perangkat jaringan (Wi-Fi, Ethernet).             |
 
    - Perintah `sudo adduser praktikan` digunakan untuk menambah user baru bernama praktikan.
-     
+
 | Bagian                                          | Makna                                               | Fungsi                                                                                            |
 | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | **sudo**                                        | Menjalankan perintah dengan hak akses administrator | Memungkinkan user biasa (*faiqatha*) menjalankan perintah yang memerlukan izin root.              |
@@ -172,8 +173,9 @@ Sertakan screenshot hasil percobaan atau diagram:
 | **fatal: The user `praktikan' already exists.** | Pesan kesalahan                                     | Menunjukkan bahwa user bernama *praktikan* sudah ada, jadi tidak bisa dibuat lagi.                |
 
    - Perintah `sudo passwd` praktikan berfungsi untuk mengubah atau menetapkan password baru bagi akun praktikan.
-
-     | Baris Output                              | Makna                                                  | Fungsinya             | ----------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+     
+| Baris Output                              | Makna                                                  | Fungsinya                                                                                |
+| ----------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
 | **sudo**                                  | Menjalankan perintah dengan hak akses administrator    | Memungkinkan user (misalnya *faiqatha*) mengubah password milik user lain (*praktikan*). |
 | **passwd praktikan**                      | Mengatur atau mengubah password untuk user *praktikan* | Digunakan untuk menetapkan kata sandi baru pada akun tersebut.                           |
 | **New password:**                         | Sistem meminta password baru                           | Admin mengetik kata sandi baru untuk user *praktikan*.                                   |
@@ -182,6 +184,11 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ---
 
+ **Eksperimen 2 – Monitoring Proses**
+  ```bash
+   ps aux | head -10
+   top -n 1
+   ```
 - Jelaskan kolom penting seperti PID, USER, %CPU, %MEM, COMMAND.
   
 | Kolom       | Arti                               | Fungsi                                                                                                                          |
