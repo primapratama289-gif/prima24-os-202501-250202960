@@ -5,9 +5,9 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : PRIMA RADITA PRATAMA  
+- **NIM**   : 250202960
+- **Kelas** : 1IKRA
 
 ---
 
@@ -43,9 +43,11 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+---<img width="1244" height="1079" alt="Screenshot 2025-10-30 014251" src="https://github.com/user-attachments/assets/003163e1-1f58-45b4-ab8f-900671f719b5" />
 
----
+<img width="1242" height="1079" alt="Screenshot 2025-10-30 014232" src="https://github.com/user-attachments/assets/cf86e89e-6ccd-4dd2-9945-0a0997251275" />
+
+
 
 ## Analisis
 - Jelaskan makna hasil percobaan.  
