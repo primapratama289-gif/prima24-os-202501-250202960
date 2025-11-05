@@ -232,42 +232,24 @@ Sertakan screenshot hasil percobaan atau diagram:
    ```bash
 systend(1)-+-agetty(199)
            |(-agetty(202)
-
            |-cron(166)
-
-           |-dbus-daemon (167)
-
-           |-init-systemd (Ub(2)+-SessionLeader(979)-Relay (986) (980) bash (986)+-head (1775)
-
-           |-pstree(1774)
-
-           |-init(6)-(init](7)
-
-           |-login(295)-bash (365)
-
-           |-[init-systemd (Ub) (8)
-
-           |-rsyslogd(189)[rsyslogd) (294)
-
-           |1-(rsyslogd) (205)
-
-           |[rsyslogd} (206)
-
-           |-systend(348)-(sd-pan) (341)
-
-           |-systemd-journal (55)
-
-           |-systend-logind (174)
-
+           |-dbus-daemon(167)
+           |-init-systemd (Ub(2)--+--SessionLeader(979)---Relay(986)(980)---bash(986)--+--head (1775)
+           |                                                                           `-pstree(1774)
+           |                      |-init(6)-(init](7)
+           |                      |-login(295)-bash(365)
+           |                      `-{init-systemd(Ub}(8)
+           |-rsyslogd(189)--+--(rsyslogd)(204)
+           |                |-{rsyslogd}(205)
+           |                |-{rsyslogd}(206)
+           |-systend(340)---(sd-pam)(341)
+           |-systemd-journal(55)
+           |-systend-logind(174)
            |-systend-resolve(153)
-
-           |-systemd-timesyn (168) [systend-tinesyn) (164)
-
-           |-systend-udevd (103)
-
-           || -unattended-upgr(203)-(unattended-upgr) (250)
-
-           |wsl-pro-service (176)+{wsl-pro-service) (209)
+           |-systemd-timesyn(160)---{systend-tinesyn}(164)
+           |-systend-udevd(103)
+           |-unattended-upgr(203)---{unattended-upgr}(250)
+           |-wsl-pro-service (176)-+-{wsl-pro-service}(209)
 ---
 
 ## Kesimpulan
