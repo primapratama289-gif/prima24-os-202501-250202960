@@ -235,10 +235,10 @@ systend(1)-+-agetty(199)
               |-cron(166)
               |-dbus-daemon(167)
               |-init-systemd(Ub(2)--+--SessionLeader(979)---Relay(986)(980)---bash(986)-+-head (1775)
-              |                      |                                                   `-pstree(1774)
-              |                      |-init(6)-(init](7)
-              |                      |-login(295)-bash(365)
-              |                      `-{init-systemd(Ub}(8)
+              |                     |                                                   `-pstree(1774)
+              |                     |-init(6)-(init](7)
+              |                     |-login(295)-bash(365)
+              |                     `-{init-systemd(Ub}(8)
               |-rsyslogd(189)--+--(rsyslogd)(204)
               |                |-{rsyslogd}(205)
               |                |-{rsyslogd}(206)
@@ -250,20 +250,104 @@ systend(1)-+-agetty(199)
               |-systend-udevd(103)
               |-unattended-upgr(203)---{unattended-upgr}(250)
               |-wsl-pro-service (176)-+-{wsl-pro-service}(209)
----
 
+```
+
+ - Proses utama (induk) dalam sistem adalah `systemd (PID 1)`.Ini adalah proses pertama yang dijalankan saat sistem Linux booting.
+  - Semua proses lain seperti `agetty`, `cron`, `dbus-daemon`, `rsyslogd`, dan `snapd` adalah turunan (child process) dari `systemd`.
+  - Proses yang kamu jalankan di terminal (misalnya `pstree`, `head`, dan `sleep`) juga akhirnya diturunkan dari `systemd` melalui `bash` (shell yang kamu pakai).
+
+
+```
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1. User dan Grup = Setiap pengguna punya ID unik dan grup untuk mengatur hak akses.
+2. Perintah penting = `whoami`, `id`, `groups` untuk cek info user : `adduser`, `passwd` untuk menambah dan mengubah user/password.
+3. Proses sistem = `ps` dan `top` untuk memantau proses, CPU, dan memori.
+
 
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+## D. Tugas & Quiz
+### Tugas
+1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.
+**Eksperimen 1 – Identitas User**
+   Jalankan perintah berikut:
+   ```bash
+   whoami
+   id
+   groups
+   ```
+ - `whoami`
+     - Perintah `whoami` digunakan untuk menampilkan nama pengguna (username) yang sedang aktif atau login di sistem Linux.Fungsi mengetahui identitas user yang sedang menjalankan terminal.
+ - `id`
+     - Perintah `id` digunakan untuk menampilkan identitas pengguna dan grup yang sedang aktif di sistem Linux. 
+ - `groups`
+    - Perintah `groups` digunakan untuk menampilkan daftar grup tempat user saat ini tergabung.
+
+ **Eksperimen 2 – Monitoring Proses**
+  ```bash
+   ps aux | head -10
+   top -n 1
+   ```
+- `ps aux | head -10`
+   - Perintah ini menampilkan daftar proses yang sedang berjalan di sistem Linux. Perintah ini menampilkan daftar proses yang sedang berjalan di sistem Linux. digunakan untuk melihat semua proses aktif beserta pengguna, ID, dan sumber daya yang digunakan (CPU dan memori).Kolom-kolom seperti USER, PID, %CPU, %MEM, dan COMMAND membantu kita memantau dan mengelola proses yang berjalan di sistem Linux.
+- `top -n 1`
+   -Perintah top digunakan untuk memantau proses yang sedang berjalan secara real-time di sistem Linux — mirip seperti “Task Manager” di Windows.
+  
+**Eksperimen 3 – Kontrol Proses**
+   ```bash
+    sleep 1000 &
+    ps aux | grep sleep
+  ```
+ ```bash
+  kill <PID>
+ ```
+- `sleep 1000 &`
+    - `sleep 1000`  memerintahkan sistem untuk *tidur* atau berhenti sejenak selama 1000 detik.
+    -  `&` menandakan bahwa proses dijalankan di background, sehingga terminal tetap bisa digunakan untuk perintah lain
+- `ps aux | grep sleep`
+    - `ps aux`  menampilkan daftar lengkap semua proses yang sedang aktif.
+    - `|`  pipe, digunakan untuk meneruskan output dari `ps aux` ke perintah berikutnya.
+    - `grep sleep`  mencari teks *sleep* di hasil keluaran tersebut.
+- `kill 1463`
+    - `kill` mengirim sinyal ke proses. Secara default mengirim sinyal `SIGTERM` untuk meminta proses berhenti dengan aman.
+    - `1463` nomor PID dari proses target yang ingin dihentikan.
+
+     
+2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
+   
+ ```bash  
+systemd(1)─┬─agetty(199)
+            ├─cron(166)
+            ├─dbus-daemon(167)
+            ├─rsyslogd(227)
+            ├─snapd(216)
+            └─init-systemd(ub(2))─┬─SessionLeader(979)─┬─Relay(986)─┬─bash(986)─┬─head(1775)
+                                                         ├─pstree(1292)
+                                                         ├─sleep(1280)
+                                                         └─sleep(1288)
+  ```
+
+3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
+  - User management dan keamanan sistem Linux saling berkaitan erat. Dengan pengaturan user, group, dan permission yang baik, administrator dapat mengontrol akses, melindungi data penting, mencegah kesalahan pengguna, dan memperkuat keamanan sistem secara keseluruhan.
+   
+4. Upload laporan ke repositori Git tepat waktu.
+
+
+---
+
+## Quiz
+1. Apa fungsi dari proses `init` atau `systemd` dalam sistem Linux?
+   jawaban: Menginisialisasi sistem, yaitu memulai semua proses penting seperti layanan (service), daemon, dan konfigurasi sistem. 
+2. Apa perbedaan antara `kill` dan `killall`?
+   jawaban: kill digunakan untuk menghentikan proses berdasarkan PID (Process ID).
+            Contoh: kill 1463 menghentikan proses dengan PID 1463.
+            killall digunakan untuk menghentikan semua proses dengan nama yang sama.
+            Contoh: killall firefox menghentikan semua proses bernama firefox. 
+3. Mengapa user `root` memiliki hak istimewa di sistem Linux?
+   jawaban: User root memiliki hak istimewa karena merupakan administrator utama sistem Linux.
+            Akun ini memiliki akses penuh ke semua file, perintah, dan konfigurasi sistem, sehingga dapat mengelola pengguna lain, menginstal atau menghapus software, serta mengubah pengaturan sistem.
 
 ---
 
