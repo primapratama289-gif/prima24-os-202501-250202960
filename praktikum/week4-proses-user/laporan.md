@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu [4]
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
@@ -141,7 +141,7 @@ Sertakan screenshot hasil percobaan atau diagram:
   - `whoami` = Perintah whoami digunakan untuk menampilkan nama pengguna (username) yang sedang aktif atau login di sistem Linux.
      - Perintah `whoami` fungsinya untuk menampilkan nama pengguna yang sedang login di sistem.
      - Hasil `faiqatha` menunjukkan bahwa user yang sedang aktif atau menjalankan terminal bernama *faiqatha*.
- - ` id` = Perintah id fungsinya untuk menampilkan identitas pengguna dan grup yang sedang aktif di sistem Linux.
+     - ` id` = Perintah id fungsinya untuk menampilkan identitas pengguna dan grup yang sedang aktif di sistem Linux.
      - `uid=1000(faiqatha)` artinya user id fungsinya menunjukan id unik  user *faiqatha* yang sedang login. 
      - `gid=1000(faiqatha)` artinya group ID Utama fungsinya Menunjukkan ID grup utama tempat user *faiqatha* tergabung.
      - `groups=...` artinya grup tambahan fungsinya Menampilkan daftar grup lain yang memberi izin dan akses tertentu.
@@ -173,8 +173,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 
    - Perintah `sudo passwd` praktikan berfungsi untuk mengubah atau menetapkan password baru bagi akun praktikan.
 
-     | Baris Output                              | Makna                                                  | Fungsinya                                                                                |
-| ----------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+     | Baris Output                              | Makna                                                  | Fungsinya             | ----------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
 | **sudo**                                  | Menjalankan perintah dengan hak akses administrator    | Memungkinkan user (misalnya *faiqatha*) mengubah password milik user lain (*praktikan*). |
 | **passwd praktikan**                      | Mengatur atau mengubah password untuk user *praktikan* | Digunakan untuk menetapkan kata sandi baru pada akun tersebut.                           |
 | **New password:**                         | Sistem meminta password baru                           | Admin mengetik kata sandi baru untuk user *praktikan*.                                   |
@@ -215,10 +214,10 @@ Sertakan screenshot hasil percobaan atau diagram:
      ```
       - Hentikan proses:
     ```bash
-    ` kill 1463`
-      ps aux | grep sleep
-      prima      1712  0.0  0.0   4088  1920 pts/0    s+   01:36  0:00 grep --color=auto sleep
-     [1]+  Terminated              sleep 1000
+    ` -kill 1463`
+    ` -ps aux | grep sleep
+      -prima      1712  0.0  0.0   4088  1920 pts/0    s+   01:36  0:00 grep --color=auto sleep
+      -[1]+  Terminated              sleep 1000    `
     
 ---
 
