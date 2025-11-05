@@ -214,7 +214,7 @@ Sertakan screenshot hasil percobaan atau diagram:
      prima        1485 0.0  0.0   4088  1920 pts/0    s+   01:27  0:00 grep --color+auto sleep
      ```
       - Hentikan proses:
-     ```bash
+    ```bash
     ` kill 1463`
       ps aux | grep sleep
       prima      1712  0.0  0.0   4088  1920 pts/0    s+   01:36  0:00 grep --color=auto sleep
@@ -231,44 +231,43 @@ Sertakan screenshot hasil percobaan atau diagram:
    - Catat hasilnya dalam laporan.
    ```bash
 systend(1)-+-agetty(199)
+           |(-agetty(202)
 
-(-agetty(202)
+           |-cron(166)
 
--cron(166)
+           |-dbus-daemon (167)
 
-|-dbus-daemon (167)
+           |-init-systemd (Ub(2)+-SessionLeader(979)-Relay (986) (980) bash (986)+-head (1775)
 
--init-systemd (Ub(2)+-SessionLeader(979)-Relay (986) (980) bash (986)+-head (1775)
+           |-pstree(1774)
 
--pstree(1774)
+           |-init(6)-(init](7)
 
--init(6)-(init](7)
+           |-login(295)-bash (365)
 
--login(295)-bash (365)
+           |-[init-systemd (Ub) (8)
 
--[init-systemd (Ub) (8)
+           |-rsyslogd(189)[rsyslogd) (294)
 
--rsyslogd(189)[rsyslogd) (294)
+           |1-(rsyslogd) (205)
 
-1-(rsyslogd) (205)
+           |[rsyslogd} (206)
 
-[rsyslogd} (206)
+           |-systend(348)-(sd-pan) (341)
 
--systend(348)-(sd-pan) (341)
+           |-systemd-journal (55)
 
--systemd-journal (55)
+           |-systend-logind (174)
 
--systend-logind (174)
+           |-systend-resolve(153)
 
--systend-resolve(153)
+           |-systemd-timesyn (168) [systend-tinesyn) (164)
 
--systemd-timesyn (168) [systend-tinesyn) (164)
+           |-systend-udevd (103)
 
--systend-udevd (103)
+           || -unattended-upgr(203)-(unattended-upgr) (250)
 
-| -unattended-upgr(203)-(unattended-upgr) (250)
-
-wsl-pro-service (176)+{wsl-pro-service) (209)
+           |wsl-pro-service (176)+{wsl-pro-service) (209)
 ---
 
 ## Kesimpulan
