@@ -257,8 +257,8 @@ systend(1)-+-agetty(199)
   - Semua proses lain seperti `agetty`, `cron`, `dbus-daemon`, `rsyslogd`, dan `snapd` adalah turunan (child process) dari `systemd`.
   - Proses yang kamu jalankan di terminal (misalnya `pstree`, `head`, dan `sleep`) juga akhirnya diturunkan dari `systemd` melalui `bash` (shell yang kamu pakai).
 
+---
 
-```
 ## Kesimpulan
 1. User dan Grup = Setiap pengguna punya ID unik dan grup untuk mengatur hak akses.
 2. Perintah penting = `whoami`, `id`, `groups` untuk cek info user : `adduser`, `passwd` untuk menambah dan mengubah user/password.
