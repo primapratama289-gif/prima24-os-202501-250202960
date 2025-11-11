@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu [5]
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Prima Radita Pratama
+- **NIM**   : 250202960
+- **Kelas** : 1IKRA
 
 ---
 
@@ -43,7 +43,8 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+<img width="720" height="567" alt="Week5 png" src="https://github.com/user-attachments/assets/d96bc62d-1ce7-4f08-9064-cedf512584f9" />
+
 
 ---
 
