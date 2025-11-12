@@ -18,7 +18,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 2. Menyajikan hasil perhitungan dalam tabel yang rapi dan mudah dibaca.
 3. Membandingkan performa FCFS dan SJF berdasarkan hasil analisis.
 4. Menjelaskan kelebihan dan kekurangan masing-masing algoritma.
-4. Menyimpulkan kapan algoritma FCFS atau SJF lebih sesuai digunakan.
+5. Menyimpulkan kapan algoritma FCFS atau SJF lebih sesuai digunakan.
 ---
 
 ## Dasar Teori
@@ -102,26 +102,50 @@ dmesg | head
 Sertakan screenshot hasil percobaan atau diagram:
 <img width="720" height="567" alt="Week5 png" src="https://github.com/user-attachments/assets/d96bc62d-1ce7-4f08-9064-cedf512584f9" />
 
+---
+
+## Eksperimen 3 Perbandingan FCFS & SJF
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | 8,75 | 14,75 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | 6,25 | 12,25 | Optimal untuk job pendek | Menyebabkan starvation pada job panjang |
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+Analisis Algoritma FCFS (First Come First Served)
+Berdasarkan hasil perhitungan, algoritma FCFS menghasilkan Average Waiting Time (AWT) sebesar 8,75 dan Average Turnaround Time (ATT) sebesar 14,75. Nilai ini menunjukkan bahwa proses yang datang lebih awal akan langsung dieksekusi terlebih dahulu tanpa memperhatikan waktu eksekusi (Burst Time). Namun, hal ini menimbulkan efek convoy effect, di mana proses yang memiliki Burst Time pendek harus menunggu proses yang lebih lama selesai terlebih dahulu. Akibatnya, efisiensi CPU berkurang karena total waktu tunggu menjadi cukup besar.
+
+Analisis Algoritma SJF (Shortest Job First)
+Pada algoritma SJF, hasil perhitungan menunjukkan Average Waiting Time (AWT) sebesar 6,25 dan Average Turnaround Time (ATT) sebesar 12,25. Nilai ini lebih rendah dibandingkan dengan FCFS, yang berarti algoritma SJF lebih efisien dalam mengurangi waktu tunggu dan penyelesaian proses. Hal ini terjadi karena SJF memprioritaskan proses dengan waktu eksekusi (Burst Time) terpendek, sehingga dapat meningkatkan throughput dan mengurangi penundaan.
+
+Perbandingan dan Kesimpulan Analisis
+Dari hasil kedua eksperimen, terlihat bahwa algoritma SJF memberikan performa yang lebih optimal dibandingkan FCFS, karena mampu menurunkan rata-rata waktu tunggu dan waktu penyelesaian. Akan tetapi, penerapan SJF memerlukan estimasi waktu eksekusi setiap proses secara akurat, dan dalam sistem nyata hal ini tidak selalu mudah dilakukan.
+Sementara itu, FCFS tetap unggul dalam kesederhanaan dan keadilan (fairness), karena setiap proses dilayani sesuai urutan kedatangan tanpa diskriminasi waktu eksekusi.
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1. Algoritma FCFS (First Come First Served) memberikan hasil yang lebih sederhana dan mudah diimplementasikan, namun memiliki kelemahan yaitu waiting time dan turnaround time rata-rata lebih tinggi karena proses dengan waktu eksekusi pendek bisa tertunda oleh proses yang lebih lama.
+
+2. Algoritma SJF (Shortest Job First) menghasilkan performa yang lebih baik dibandingkan FCFS dengan average waiting time dan average turnaround time yang lebih rendah, karena proses dengan waktu eksekusi lebih singkat dieksekusi lebih dahulu.
+
+3. Dari hasil perbandingan, dapat disimpulkan bahwa SJF lebih efisien dalam meminimalkan waktu tunggu dan waktu penyelesaian, namun penerapannya lebih kompleks karena memerlukan estimasi waktu eksekusi (burst time) yang akurat.
 
 ---
 
 ## Quiz
 1. Apa perbedaan utama antara FCFS dan SJF?
+
+jawaban:Perbedaan utama antara FCFS (First Come First Served) dan SJF (Shortest Job First) terletak pada cara menentukan urutan proses yang dieksekusi. FCFS menjalankan proses berdasarkan urutan kedatangan, sehingga proses yang datang lebih dulu akan dikerjakan lebih dulu tanpa memperhatikan lama eksekusi. Sementara itu, SJF memilih proses dengan waktu eksekusi paling pendek untuk dijalankan terlebih dahulu agar waktu tunggu rata-rata lebih efisien. FCFS mudah diterapkan tetapi kurang efisien, sedangkan SJF lebih cepat namun memerlukan perkiraan waktu eksekusi tiap proses.
+
 2. Mengapa SJF dapat menghasilkan rata-rata waktu tunggu minimum?
+
+jawaban:SJF atau Shortest Job First dapat menghasilkan rata-rata waktu tunggu minimum karena algoritma ini selalu mengeksekusi proses dengan waktu eksekusi paling pendek terlebih dahulu. Dengan cara tersebut, proses yang membutuhkan waktu singkat dapat segera selesai tanpa harus menunggu proses yang lebih lama. Akibatnya, total waktu tunggu semua proses menjadi lebih kecil dibandingkan jika proses dengan waktu panjang dijalankan lebih awal. Karena itulah, SJF dianggap sebagai algoritma yang paling efisien dalam meminimalkan waktu tunggu rata-rata, meskipun memerlukan perkiraan waktu eksekusi yang tidak selalu mudah diketahui.
+
 3. Apa kelemahan SJF jika diterapkan pada sistem interaktif?
 
+jawaban:Kelemahan SJF jika diterapkan pada sistem interaktif adalah algoritma ini tidak cocok untuk menangani proses yang membutuhkan respons cepat. Dalam sistem interaktif, pengguna biasanya mengharapkan proses dijalankan segera setelah memberikan input. Namun, SJF dapat menyebabkan proses dengan waktu eksekusi panjang terus-menerus tertunda karena proses yang lebih pendek selalu diprioritaskan. Akibatnya, proses besar bisa mengalami penundaan yang lama atau bahkan tidak pernah mendapat giliran eksekusi, yang disebut dengan istilah starvation. Selain itu, sulit untuk memperkirakan waktu eksekusi proses secara akurat pada sistem interaktif, sehingga penerapan SJF menjadi kurang efektif dan tidak praktis.
 ---
 
 ## Refleksi Diri
